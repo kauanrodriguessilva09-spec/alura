@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🥧🍫✨ Blog de Receitas do Kauanzinho ✨🍫🥧</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px 0;
+        }
+
         header {
             background-color: #FE8E8E;
             color: #000000;
             text-align: center;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 16px auto;
             padding: 16px;
             border: 5px solid #cf1010;
         }
@@ -19,12 +26,12 @@
             background-color: #ACC8E5;
             color: #000000;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 16px auto;
             padding: 16px;
             border: 5px solid #0051A8;
             display: flex;
             gap: 16px;
-            flex-wrap: wrap;
+            box-sizing: border-box;
         }
 
         img {
@@ -32,6 +39,7 @@
             height: 100px;
             object-fit: cover;
             border-radius: 8px;
+            border: 2px solid #0051A8;
         }
 
         .artigo-autor {
@@ -58,9 +66,60 @@
         button:hover {
             transform: scale(1.1);
         }
+
+        /* Nova Seção: Receita e Marcas */
+        .secao-receita {
+            background-color: #FFF3CD;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 5px solid #856404;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        .secao-receita h2, .secao-receita h3 {
+            color: #533f03;
+            border-bottom: 2px dashed #856404;
+            padding-bottom: 6px;
+        }
+
+        .secao-receita ul, .secao-receita ol {
+            line-height: 1.6;
+        }
+
+        .marcas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .marca-card {
+            background-color: #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ffeeba;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .marca-card strong {
+            color: #856404;
+        }
+
+        .fontes-box {
+            background-color: #e2e3e5;
+            border: 1px solid #d6d8db;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
     </style>    
 </head>
 <body>
+
     <header>
         <h1>👑 MEU BLOG DE BOLO 🍰🎂🎉</h1>
         <p>👨‍🍳 Feito por: Kauanzinho ⭐💫</p>
@@ -73,7 +132,7 @@
             <p class="artigo-autor">🏫 Produção Escolar 📚✏️</p>
             <p>👋 Seja muito bem-vindo ao meu blog sobre bolo de chocolate! 🍫🥧 Aqui você vai aprender passo a passo a receita mais incrível, rápida ⚡ e deliciosa 😋!</p>
 
-            <h3> deixe sua reação abaixo! 👇🔥💬</h3>
+            <h3>Deixe sua reação abaixo! 👇🔥💬</h3>
             <div class="botoes-reacao">
                 <button>🤤 <span>0</span></button>
                 <button>😋 <span>0</span></button>
@@ -90,70 +149,90 @@
                 <button>💖 <span>0</span></button>
                 <button>😎 <span>0</span></button>
                 <button>🤩 <span>0</span></button>
-                <button>🤪 <span>0</span></button>
-                <button>😜 <span>0</span></button>
-                <button>👻 <span>0</span></button>
-                <button>👽 <span>0</span></button>
-                <button>🤖 <span>0</span></button>
-                <button>👾 <span>0</span></button>
-                <button>🎃 <span>0</span></button>
-                <button>🦄 <span>0</span></button>
-
                 <button>🍰 <span>0</span></button>
                 <button>🎂 <span>0</span></button>
                 <button>🧁 <span>0</span></button>
-                <button>🥧 <span>0</span></button>
                 <button>🍫 <span>0</span></button>
-                <button>🍬 <span>0</span></button>
-                <button>🍭 <span>0</span></button>
-                <button>🍮 <span>0</span></button>
-                <button>🍩 <span>0</span></button>
-                <button>🍪 <span>0</span></button>
                 <button>🍓 <span>0</span></button>
-                <button>🍒 <span>0</span></button>
-                <button>🍎 <span>0</span></button>
-                <button>🍕 <span>0</span></button>
-                <button>🍔 <span>0</span></button>
-                <button>🍟 <span>0</span></button>
-                <button>🌭 <span>0</span></button>
-
                 <button>🐶 <span>0</span></button>
-                <button>🐱 <span>0</span></button>
-                <button>🐭 <span>0</span></button>
-                <button>🐹 <span>0</span></button>
-                <button>🐰 <span>0</span></button>
-                <button>🦊 <span>0</span></button>
-                <button>🐻 <span>0</span></button>
-                <button>🐼 <span>0</span></button>
-                <button>🐨 <span>0</span></button>
-                <button>🐯 <span>0</span></button>
-                <button>🦁 <span>0</span></button>
-
                 <button>⭐ <span>0</span></button>
-                <button>🌟 <span>0</span></button>
-                <button>✨ <span>0</span></button>
-                <button>⚡ <span>0</span></button>
-                <button>🌈 <span>0</span></button>
-                <button>☀️ <span>0</span></button>
-                <button>🌙 <span>0</span></button>
-                <button>🌚 <span>0</span></button>
-                <button>🌝 <span>0</span></button>
-                <button>⚡ <span>0</span></button>
-
                 <button>🎉 <span>0</span></button>
-                <button>🎊 <span>0</span></button>
-                <button>🎈 <span>0</span></button>
-                <button>🎁 <span>0</span></button>
-                <button>🏆 <span>0</span></button>
-                <button>👑 <span>0</span></button>
-                <button>💎 <span>0</span></button>
                 <button>🚀 <span>0</span></button>
-                <button>🛸 <span>0</span></button>
-                <button>💣 <span>0</span></button>
-                <button>👑 <span>0</span></button>
             </div>
         </div>
     </main>
+
+    <section class="secao-receita">
+        <h2>👩‍🍳 Como Fazer o Bolo de Chocolate Perfeito 🥧</h2>
+        
+        <h3>🛒 Ingredientes da Massa:</h3>
+        <ul>
+            <li>🌾 3 xícaras (chá) de farinha de trigo peneirada</li>
+            <li>🍚 1 xícara (chá) de açúcar</li>
+            <li>🍫 1 xícara (chá) de cacau em pó (ou chocolate em pó 50%)</li>
+            <li>🥚 3 ovos inteiros</li>
+            <li>🥛 1 xícara (chá) de leite morno (ou água morna para deixar fofinho)</li>
+            <li>🧈 ½ xícara (chá) de óleo ou manteiga derretida</li>
+            <li>🥄 1 colher (sopa) de fermento em pó químico</li>
+        </ul>
+
+        <h3>🍫 Ingredientes da Cobertura (Calda Cremosa):</h3>
+        <ul>
+            <li>🥛 1 caixa de leite condensado</li>
+            <li>🍦 1 caixa de creme de leite</li>
+            <li>🍫 3 colheres (sopa) de cacau em pó ou 150g de chocolate meio amargo</li>
+            <li>🧈 1 colher (sopa) de manteiga</li>
+        </ul>
+
+        <h3>🥣 Modo de Preparo Passo a Passo:</h3>
+        <ol>
+            <li>Em uma tigela ou liquidificador, bata os ovos, o açúcar, o óleo (ou manteiga) e o cacau até formar um creme homogêneo.</li>
+            <li>Adicione o leite morno e vá acrescentando a farinha de trigo aos poucos, misturando bem.</li>
+            <li>Por último, adicione o fermento e misture delicadamente com uma espátula.</li>
+            <li>Despeje em uma forma untada e enfarinhada (ou polvilhada com cacau em pó).</li>
+            <li>Leve ao forno preaquecido a 180°C por cerca de 35 a 40 minutos (faça o teste do palito).</li>
+            <li><strong>Para a cobertura:</strong> Leve todos os ingredientes ao fogo baixo em uma panela, mexendo até engrossar. Despeje ainda quente sobre o bolo já assado! 😋</li>
+        </ol>
+
+        <h2>⭐ Guia das Melhores Marcas de Ingredientes</h2>
+        <p>Para garantir o melhor sabor e textura no seu bolo, confira as marcas mais indicadas por confeiteiros:</p>
+
+        <div class="marcas-grid">
+            <div class="marca-card">
+                <strong>🌾 Farinha de Trigo:</strong><br>
+                Dona Benta, Renata, Rosa Branca, Anaconda.
+            </div>
+            <div class="marca-card">
+                <strong>🍫 Cacau / Chocolate em Pó:</strong><br>
+                Sicao (Barry Callebaut), Nestlé Dois Frades, Garoto, Dr. Oetker, Harald.
+            </div>
+            <div class="marca-card">
+                <strong>🥄 Fermento Químico:</strong><br>
+                Royal, Dr. Oetker, Dona Benta.
+            </div>
+            <div class="marca-card">
+                <strong>🥛 Leite Condensado e Creme de Leite:</strong><br>
+                Leite Moça (Nestlé), Itambé, Piracanjuba, Elegê.
+            </div>
+            <div class="marca-card">
+                <strong>🧈 Manteiga / Margarina:</strong><br>
+                Aviação, Batavo, Qualy, Doriana.
+            </div>
+            <div class="marca-card">
+                <strong>🍫 Chocolate em Barra (Cobertura):</strong><br>
+                Melken (Harald), Sicao, Callebaut, Garoto, Nestlé.
+            </div>
+        </div>
+
+        <div class="fontes-box">
+            <strong>📚 Fontes e Referências Consultadas:</strong>
+            <ul>
+                <li><a href="https://www.tudogostoso.com.br" target="_blank">TudoGostoso</a> — Guia de receitas clássicas de bolos caseiros.</li>
+                <li><a href="https://www.receitasnestle.com.br" target="_blank">Receitas Nestlé</a> — Proporções e técnicas de panificação e cobertura.</li>
+                <li><strong>Guia da Confeitaria & MyBest Brasil</strong> — Avaliações de desempenho das melhores marcas de cacau e farinha do mercado nacional.</li>
+            </ul>
+        </div>
+    </section>
 
     <script>
         const botoes = document.querySelectorAll("button");
