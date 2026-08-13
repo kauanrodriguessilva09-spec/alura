@@ -1,106 +1,77 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥧 Blog de Receitas</title>
+    <style>
+        header {
+            background-color: #FE8E8E;
+            color: #000000;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            border: 5px solid #cf1010;
+        }
 
-    <html lang="pt-br">
-        <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>🥧</title>
-        <style>
-            header {
-                background-color: #FE8E8E;
-                color: #000000;
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;
-                border: 5px solid #cf1010;
-            }
-            main{
-                background-color: #ACC8E5;
-                color: #000000;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;
-                border: 5px solid #0051A8;
-                display: flex;
-            }
-            img{
-                width: 80px;
-                height: 80px;
-            }
-            .artigo-autor {
-            div p {299
-                font-weight: bold;
-            }
-            
-        </style>    
-    </head>
-    <body>
-        <header>
-        <h1>MEU BLOBO</h1>
+        main {
+            background-color: #ACC8E5;
+            color: #000000;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            border: 5px solid #0051A8;
+            display: flex;
+            gap: 16px;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+        }
+    </style>    
+</head>
+<body>
+    <header>
+        <h1>MEU BLOG</h1>
         <p>Feito por: Kauanzinho</p>
-        </header>
-        <main>
-            <img src= "meubolinho.png" alt="Um bolo de chocolate quadrado e alto com cinco camadas aparentes, recheado com creme de chocolate escuro.
-                Uma cobertura brilhante e espessa de ganache de chocolate escorre pelas laterais, criando gotas densas que tocam uma tábua de madeira rústica.
-                O topo do bolo está generosamente decorado com uma montanha de frutas vermelhas frescas, incluindo morangos inteiros, mirtilos, framboesas e cubos de chocolate amargo.
-                Ao fundo, uma cozinha iluminada.">
-            <div>
-                <h2>Informação inicial:</h2>
-                <p class="artigo-autor">Produção Escolar
-                <p>Sejão bem vindos ao meu blog sobre bolo de chocolate, aqui você irá aprender passo a passo a produção de um bolo do seguinte sabor:
-                Chocolate. Fácil, rápido e prático que até seu cachorro burro pode fazer.</p>
+    </header>
+
+    <main>
+        <img src="meubolinho.png" alt="Bolo de chocolate com frutas vermelhas">
+        <div>
+            <h2>Informação inicial:</h2>
+            <p class="artigo-autor">Produção Escolar</p>
+            <p>Sejam bem-vindos ao meu blog sobre bolo de chocolate! Aqui você irá aprender passo a passo a produção de um bolo de chocolate fácil, rápido e prático.</p>
+
+            <div class="botoes-reacao">
                 <button>🤤 <span>0</span></button> 
                 <button>😋 <span>0</span></button>
                 <button>🥳 <span>0</span></button>
                 <button>🥺 <span>0</span></button>
                 <button>🤢 <span>0</span></button>
                 <button>🤮 <span>0</span></button>
-                <button>🖕 <span>0</span></button>
-                <button>6️⃣ <span>0</span></button>
-                <button>7️⃣ <span>0</span></button>
-                <button>🏳️‍🌈 <span>0</span></button>
-                <button>💋 <span>0</span></button>
-                <button>👿 <span>0</span></button>
-                <button>💯 <span>0</span></button>
-                <button>👽 <span>0</span></button>
                 <button>💩 <span>0</span></button>
-                <button>♂️ <span>0</span></button>
-                <button>♀️ <span>0</span></button>
-                <button>👂 <span>0</span></button>
-                <button>💢 <span>0</span></button>
-                <button>💤 <span>0</span></button>
-                <button>💔 <span>0</span></button>
-                <button>🦴 <span>0</span></button>
-                <button>🫁 <span>0</span></button>
-                <button>🫀 <span>0</span></button>
-                <button>🧠 <span>0</span></button>
-                <button>💅🏻 <span>0</span></button>
-                <button>🦶🏽 <span>0</span></button>
-                <button>🌚 <span>0</span></button>
-                <button>🌝 <span>0</span></button>
                 <button>🔥 <span>0</span></button>
-                <button>💥 <span>0</span></button>
-                <button>💦 <span>0</span></button>
-                <button>🔞 <span>0</span></button>
-           </div>
-            
-        </main>
-    </body>
-        <script>
-            const botoes = document.querySelectorAll("button");
+            </div>
+        </div>
+    </main>
 
-            botoes.forEach(function(botao) {
-            botao.addEventListener("click", botaoClicado);
-                
-            function botaoClicado(){
-                console.log("fui clicado");
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function(botao) {
+            botao.addEventListener("click", function() {
                 let texto = botao.querySelector("span");
-                texto.textContent++
-            }
-        }
-    )
-
-            
-        </script>
+                texto.textContent = Number(texto.textContent) + 1;
+            });
+        });
+    </script>
+</body>
 </html>
